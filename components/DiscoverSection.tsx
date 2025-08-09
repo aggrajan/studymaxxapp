@@ -6,7 +6,7 @@ export default function DiscoverSection() {
   return (
     <View style={styles.container}>
       <Image
-        source={require('./assets/discoversec.png')}
+        source={require('@/assets/discoversec.png')}
         style={styles.image}
         resizeMode="cover"
       />

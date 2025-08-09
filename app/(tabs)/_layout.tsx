@@ -1,8 +1,9 @@
+// app/(tabs)/_layout.tsx
 import { Tabs } from 'expo-router';
 import React from 'react';
-import { TabBarIcon } from '@/components/navigation/TabBarIcon'; // This is a common Expo component
-import { useColorScheme } from '@/hooks/useColorScheme';
+import { TabBarIcon } from '@/components/navigation/TabBarIcon'; // Corrected import path
 import { Colors } from '@/constants/Colors';
+import { useColorScheme } from '@/hooks/useColorScheme';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -11,10 +12,10 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: true, // We can show the header if you like
+        headerShown: false,
       }}>
       <Tabs.Screen
-        name="index" // This links to app/(tabs)/index.tsx
+        name="index"
         options={{
           title: 'Home',
           tabBarIcon: ({ color, focused }) => (
@@ -23,7 +24,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="explore" // This is your existing explore tab
+        name="explore"
         options={{
           title: 'Explore',
           tabBarIcon: ({ color, focused }) => (
@@ -31,6 +32,7 @@ export default function TabLayout() {
           ),
         }}
       />
+      {/* Add more Tabs.Screen components for other tabs if needed */}
     </Tabs>
   );
 }

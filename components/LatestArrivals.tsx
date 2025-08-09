@@ -9,9 +9,9 @@ interface Book {
 }
 
 const latestBooks: Book[] = [
-    { _id: "1", title: "Mathematics for Class 8", image: require('./assets/book-placeholder.png') },
-    { _id: "2", title: "Mathematics for Class 10", image: require('./assets/book-placeholder.png') },
-    { _id: "3", title: "Mathematics for Class 6", image: require('./assets/book-placeholder.png') },
+    { _id: "1", title: "Mathematics for Class 8", image: require('@/assets/book-placeholder.png') },
+    { _id: "2", title: "Mathematics for Class 10", image: require('@/assets/book-placeholder.png') },
+    { _id: "3", title: "Mathematics for Class 6", image: require('@/assets/book-placeholder.png') },
 ];
 
 const renderItem = ({ item }: { item: Book }) => (

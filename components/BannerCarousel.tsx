@@ -9,9 +9,9 @@ interface BannerItem {
 }
 
 const bannerData: BannerItem[] = [
-  { id: 1, image: require('./assets/mweb1.png') },
-  { id: 2, image: require('./assets/mweb2.png') },
-  { id: 3, image: require('./assets/mweb3.png') },
+  { id: 1, image: require('@/assets/mweb1.png') },
+  { id: 2, image: require('@/assets/mweb2.png') },
+  { id: 3, image: require('@/assets/mweb3.png') },
 ];
 
 const { width: screenWidth } = Dimensions.get('window');
